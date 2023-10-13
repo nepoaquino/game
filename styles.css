@@ -1,0 +1,71 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  touch-action: manipulation;
+  background-color: #ccc;
+  overflow: hidden;
+}
+
+#canvas-container {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+
+}
+
+#canvas {
+  border: 1px solid black;
+  max-height: 95vh;
+  max-width: 95vw;
+  padding: 10px;
+  margin: 0;
+}
+
+.joystick {
+  display: none;
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #cccccc50;
+  border: 2px solid #00000070;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+}
+
+#joystick-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+#joystick {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background-color: #33333370;
+  border-radius: 50%;
+  left: 25px;
+  top: 25px;
+  cursor: pointer;
+}
+
+
+/* Media query to show the joystick on mobile devices */
+@media screen and (max-width: 780px) {
+  .joystick {
+    display: block;
+  }
+}
